@@ -19,6 +19,7 @@ public class Task2 implements Task {
 		for (String arg : args) {
 			try {
 				numbers.add(Integer.valueOf(arg));
+
 			} catch (NumberFormatException exception) {
 				//wrong format
 				numbers.clear();

@@ -13,21 +13,21 @@ public class Task3 implements Task {
 
 	@Override
 	public void execute(String[] args) {
-		if (areIncorrect(args)) {
-			System.out.println("No input data or first number not matching following numbers");
-			return;
-		}
 		try {
+			if (areIncorrect(args)) {
+				System.out.println("No input data or first number not matching following numbers");
+				return;
+			}
 			pointsNumber = Integer.parseInt(args[0]) * 2;
+
+			setUpGraphs(args);
+			printOutput();
 		} catch (NumberFormatException exception) {
 			//wrong format
 			pointsNumber = 0;
 			graphs.clear();
 			System.out.println("Wrong inputs format");
-			return;
 		}
-		setUpGraphs(args);
-		printOutput();
 	}
 
 	private void printOutput() {

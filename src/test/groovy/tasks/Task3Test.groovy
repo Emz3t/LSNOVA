@@ -38,7 +38,7 @@ class Task3Test extends Specification {
         given:
 
         when:
-        taskService.execute("1", "kaka", "20", "null", "2", "5")
+        taskService.execute("1", "kaka", "20", "null", "2", "5", "6")
 
         then:
         taskService.getGraphs().size() == 0
